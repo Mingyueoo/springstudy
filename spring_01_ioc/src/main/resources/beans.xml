@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="daoMysql" class="com.ming.dao.UserDaoMysqlImpl">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="daoOracle" class="com.ming.dao.UserDaoOracleImpl">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="userService" class="com.ming.service.UserServiceImpl">
+        <property name="userDao" ref="daoOracle"></property>
+
+
+    </bean>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>

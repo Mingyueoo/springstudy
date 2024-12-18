@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.ming.pojo.Address">
+        <property name="address" value="Xian"></property>
+    </bean>
+
+    <bean id="student" class="com.ming.pojo.Student">
+        <property name="name" value="Mingyue"></property>
+        <property name="address" ref="address"></property>
+        <property name="books">
+            <array>
+                <value>Romance of the Three Kingdoms</value>
+                <value>Outlaws of the Marsh</value>
+                <value>Journey to the West</value>
+                <value>A Dream of Red Mansions</value>
+            </array>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="ID" value="320924199999999999"></entry>
+                <entry key="bank card" value="263789897728977"></entry>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BOB</value>
+            </set>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>Sing</value>
+                <value>Paint</value>
+                <value>Swim</value>
+            </list>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="url">ccc.com</prop>
+                <prop key="username">root</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+        <property name="wife">
+            <null></null>
+        </property>
+    </bean>
+
+
+
+</beans>
